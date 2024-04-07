@@ -49,6 +49,14 @@ a,button {
     padding: 25px
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.section {
+    padding-top: 2rem;
+}
+
 /*-------------------- HERO --------------------*/
 .hero {
     -webkit-user-select: none;
@@ -193,6 +201,10 @@ a,button {
 .nav-links-filled .nav-links-item,
 .nav-links-filled .nav-links-item.contact {
     color: #fff;
+}
+
+.contact {
+    display: none;
 }
 
 nav-links-filled .nav-slider {
@@ -647,39 +659,32 @@ nav-links-filled .nav-slider {
     }
 }
 
-@media screen and (min-width: 500px) {
-    .writings-card {
-        padding:20px
+@media (max-width: 570px) {
+    .projects-card-languages {
+        /* display:flex;
+        gap: 30px */
+        display: none;
     }
+}
 
-    .writings-card-wrapper {
+@media screen and (max-width: 500px) {
+    .project:hover .projects-links {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 10px
-    }
-
-    .writings-card-wrapper span {
-        gap: 10px
-    }
-
-    .writings-card-wrapper span:nth-child(2) {
-        display: inline-block
-    }
-
-    .writings-card-wrapper-minutes {
-        flex-direction: row
+        font-size: 30px;
+        gap: 2rem;
+        opacity: 1;
+        margin-top: 2rem;
+        cursor: pointer;
     }
 }
 
 @media screen and (min-width: 540px) {
     .projects-card-languages {
-        display:flex;
-        gap: 30px
+        display: none;
     }
 }
 
-@media screen and (min-width: 495px) {
+@media screen and (min-width: 570px) {
     .projects-card {
         padding:30px;
         align-items: center
